@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Period</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Edit Period</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${period}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Period ID:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+				</tr>			
+				<tr>
+					<td>Start Day:</td>
+					<td><input type="text" th:field="*{startDay}" /></td>
+				</tr>
+				<tr>
+					<td>Start Month:</td>
+					<td><input type="text" th:field="*{startMonth}" /></td>
+				</tr>
+				<tr>
+					<td>Start Year:</td>
+					<td><input type="text" th:field="*{startYear}" /></td>
+				</tr>	
+				<tr>
+					<td>End Day:</td>
+					<td><input type="text" th:field="*{endDay}" /></td>
+				</tr>
+				<tr>
+					<td>End Month:</td>
+					<td><input type="text" th:field="*{endMonth}" /></td>
+				</tr>
+				<tr>
+					<td>End Year:</td>
+					<td><input type="text" th:field="*{endYear}" /></td>
+				</tr>	
+				<tr>
+					<td>Pain Level:</td>
+					<td><input type="text" th:field="*{painLevel}" /></td>
+				</tr>	
+				<tr>
+					<td>Username:</td>
+					<td><input type="text" th:field="*{userName}" readonly="readonly" /></td>
+				</tr>					
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
